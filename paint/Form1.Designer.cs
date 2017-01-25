@@ -39,9 +39,9 @@
 			this.circleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.triangleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.colorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripComboBox_size = new System.Windows.Forms.ToolStripComboBox();
 			this.panel_main = new System.Windows.Forms.Panel();
 			this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -50,11 +50,10 @@
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.insertToolStripMenuItem,
-            this.colorToolStripMenuItem,
-            this.toolStripComboBox_size});
+            this.colorToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(576, 27);
+			this.menuStrip1.Size = new System.Drawing.Size(576, 24);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -65,7 +64,7 @@
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "&File";
 			// 
 			// newToolStripMenuItem
@@ -97,7 +96,7 @@
             this.circleToolStripMenuItem,
             this.triangleToolStripMenuItem});
 			this.insertToolStripMenuItem.Name = "insertToolStripMenuItem";
-			this.insertToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
+			this.insertToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
 			this.insertToolStripMenuItem.Text = "&Insert";
 			// 
 			// lineToolStripMenuItem1
@@ -135,42 +134,48 @@
 			// colorToolStripMenuItem
 			// 
 			this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-			this.colorToolStripMenuItem.Size = new System.Drawing.Size(48, 23);
+			this.colorToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
 			this.colorToolStripMenuItem.Text = "Color";
 			this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
-			// 
-			// toolStripComboBox_size
-			// 
-			this.toolStripComboBox_size.Items.AddRange(new object[] {
-            "2",
-            "4",
-            "6",
-            "8",
-            "10",
-            "12"});
-			this.toolStripComboBox_size.Name = "toolStripComboBox_size";
-			this.toolStripComboBox_size.Size = new System.Drawing.Size(75, 23);
-			this.toolStripComboBox_size.Tag = "size of pen";
-			this.toolStripComboBox_size.Text = "size";
 			// 
 			// panel_main
 			// 
 			this.panel_main.BackColor = System.Drawing.Color.White;
 			this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel_main.Location = new System.Drawing.Point(0, 27);
+			this.panel_main.Location = new System.Drawing.Point(0, 24);
 			this.panel_main.Name = "panel_main";
-			this.panel_main.Size = new System.Drawing.Size(576, 306);
+			this.panel_main.Size = new System.Drawing.Size(576, 309);
 			this.panel_main.TabIndex = 1;
 			this.panel_main.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_main_Paint);
 			this.panel_main.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseDown);
 			this.panel_main.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseMove);
 			this.panel_main.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_main_MouseUp_1);
 			// 
+			// comboBox1
+			// 
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Items.AddRange(new object[] {
+            "2",
+            "4",
+            "8",
+            "14",
+            "20",
+            "30",
+            "60"});
+			this.comboBox1.Location = new System.Drawing.Point(135, 3);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(82, 21);
+			this.comboBox1.TabIndex = 2;
+			this.comboBox1.Tag = "";
+			this.comboBox1.Text = "Size";
+			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(576, 333);
+			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.panel_main);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
@@ -199,7 +204,7 @@
 		private System.Windows.Forms.ToolStripMenuItem colorToolStripMenuItem;
 		private System.Windows.Forms.ColorDialog colorDialog1;
 		private System.Windows.Forms.ToolStripMenuItem triangleToolStripMenuItem;
-		private System.Windows.Forms.ToolStripComboBox toolStripComboBox_size;
+		private System.Windows.Forms.ComboBox comboBox1;
 	}
 }
 
